@@ -22,12 +22,7 @@ public class TripulantCabinaTest {
     
     @Before
     public void setUp() {
-        objecteProva=new TripulantCabina("AAAAAAAAA", "Antonio", 40, 300, "Capità");
-    }
-    
-    @Test
-    public void testGetOceaRT() {
-        assertEquals("Atlàntic", objecteProva.getOcea());
+        objecteProva=new TripulantCabina("AAAAAAAAA", "Anselmo", 35, 8000, "Comandant");
     }
     
 }
