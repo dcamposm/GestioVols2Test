@@ -25,5 +25,13 @@ public class ClasseTest {
         objecteProva=new Classe("AAAA", 3);
     }
     
+    @Test
+    public void testGetNomClasse() {
+        assertEquals("AAAA", objecteProva.getNom());
+    }
     
+    @Test
+    public void testGetCapacitatClasse() {
+        assertEquals("Bon Dia", objecteProva.getCapacitat());
+    }
 }
