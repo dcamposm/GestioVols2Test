@@ -27,6 +27,6 @@ public class RutaNacionalTest {
     
     @Test
     public void testGetPaisRN() {
-        assertEquals("R001", objecteProva.getPais());
-    } 
+        assertEquals("Espanya", objecteProva.getPais());
+    }
 }
