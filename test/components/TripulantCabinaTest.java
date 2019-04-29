@@ -25,4 +25,9 @@ public class TripulantCabinaTest {
         objecteProva=new TripulantCabina("AAAAAAAAA", "Anselmo", 35, 8000, "Comandant");
     }
     
+    @Test
+    public void testGetBarresTC() {
+        assertEquals(4, objecteProva.getBarres());
+    }
+    
 }

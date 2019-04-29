@@ -57,6 +57,16 @@ public class TripulantTest {
     }
     
     @Test
+    public void testGetDataAltaTC() {
+        assertEquals("20-04-2019", tripulantCabina.getDataAlta());
+    }
+    
+    @Test
+    public void testGetDataAltaTCP() {
+        assertEquals("20-04-2019", TCP.getDataAlta());
+    }
+    
+    @Test
     public void testGetHoresVolTC() {
         assertEquals(8000, tripulantCabina.getHoresVol());
     }
@@ -64,5 +74,10 @@ public class TripulantTest {
     @Test
     public void testGetHoresVolTCP() {
         assertEquals(300, TCP.getHoresVol());
+    }
+    
+    @Test
+    public void testGetRangTC() {
+        assertEquals("Comandant", tripulantCabina.getRang());
     }
 }
