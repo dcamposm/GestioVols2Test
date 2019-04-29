@@ -43,13 +43,23 @@ public class VolTest {
     }
     
     @Test
-    public void testGetDataSortidaVol() {
-        assertEquals(0, objecteProva.getDataSortida());
+    public void testGetDataSortidaVol() throws ParseException {
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy").parse("20-04-2019"), objecteProva.getDataSortida());
     }
     
     @Test
-    public void testGetDataArribadaVol() {
-        assertEquals(0, objecteProva.getDataArribada());
+    public void testGetDataArribadaVol() throws ParseException {
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy").parse("26-04-2019"), objecteProva.getDataArribada());
+    }
+    
+    @Test
+    public void testGetHoraSortidaVol() {
+        assertEquals(LocalTime.of(5, 0, 0, 0), objecteProva.getHoraSortida());
+    }
+    
+    @Test
+    public void testGetHoraArribadaVol() {
+        assertEquals(LocalTime.of(11, 30, 0, 0), objecteProva.getHoraArribada());
     }
     
     @Test
