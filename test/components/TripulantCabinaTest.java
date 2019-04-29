@@ -22,12 +22,12 @@ public class TripulantCabinaTest {
     
     @Before
     public void setUp() {
-        objecteProva=new TripulantCabina("AAAAAAAAA", "Antonio", 40, 300, "Capità");
+        objecteProva=new TripulantCabina("AAAAAAAAA", "Anselmo", 35, 8000, "Comandant");
     }
     
     @Test
-    public void testGetOceaRT() {
-        assertEquals("Atlàntic", objecteProva.getOcea());
+    public void testGetBarresTC() {
+        assertEquals(4, objecteProva.getBarres());
     }
     
 }
