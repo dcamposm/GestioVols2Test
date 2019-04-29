@@ -70,7 +70,7 @@ public class AvioTest {
 
         Classe classe = Classe.novaClasse();
 
-        if (testSeleccionarClasseAvio(classe.getNom()) == -1) { //La classe no existeix
+        if (objecteProva.seleccionarClasse(classe.getNom()) == -1) { //La classe no existeix
 
             for (int i = 0; i < objecteProva.getPosicioClasses(); i++) {
                 capacitatClasses += objecteProva.getClasses()[i].getCapacitat();
@@ -82,20 +82,20 @@ public class AvioTest {
 
             objecteProva.setPosicioClasses(objecteProva.getPosicioClasses()+1);
 
-        } else if (testSeleccionarClasseAvio(classe.getNom()) != -1 || capacitatClasses + classe.getCapacitat() > objecteProva.getCapacitat()) {
+        } else if (objecteProva.seleccionarClasse(classe.getNom()) != -1 || capacitatClasses + classe.getCapacitat() > objecteProva.getCapacitat()) {
             System.out.println("\nLa classe no s'ha pogut afegir");
         }
 
     }
     
     @Test
-    public int testSeleccionarClasseAvio(String nom) {
-
+    public int testSeleccionarClasseAvio() {
+        String nomTest = "a";
         boolean trobat = false;
         int pos = -1;
 
         for (int i = 0; i < objecteProva.getPosicioClasses() && !trobat; i++) {
-            if (objecteProva.getClasses()[i].getNom().equals(nom)) {
+            if (objecteProva.getClasses()[i].getNom().equals(nomTest)) {
                 pos = i;
                 trobat = true;
             }
